@@ -12,27 +12,18 @@ const NEWS_API_KEY = 'fe8f6f956c4e42929d774630de500892';
 const PORT = process.env.PORT || 3000;
 
 // Global hantavirus case data (from public ArcGIS dataset + WHO)
+// Global hantavirus case data (MV Hondius outbreak + contacts, 2026)
 const globalCaseData = {
-  USA: { cases: 17, deaths: 0, confirmed: 17, suspected: 0, strain: 'Sin Nombre/Andes' },
-  Netherlands: { cases: 4, deaths: 1, confirmed: 4, suspected: 0, strain: 'Andes' },
+  USA: { cases: 2, deaths: 0, confirmed: 2, suspected: 0, strain: 'Andes' },
+  Netherlands: { cases: 2, deaths: 1, confirmed: 2, suspected: 0, strain: 'Andes' },
   UK: { cases: 1, deaths: 0, confirmed: 1, suspected: 0, strain: 'Andes' },
   Germany: { cases: 1, deaths: 1, confirmed: 1, suspected: 0, strain: 'Andes' },
   France: { cases: 2, deaths: 0, confirmed: 1, suspected: 1, strain: 'Andes' },
   'South Africa': { cases: 1, deaths: 0, confirmed: 1, suspected: 0, strain: 'Andes' },
   Argentina: { cases: 1, deaths: 1, confirmed: 1, suspected: 0, strain: 'Andes' },
-  'Tristan da Cunha': { cases: 1, deaths: 0, confirmed: 0, suspected: 1, strain: 'Andes' },
-  Canada: { cases: 3, deaths: 0, confirmed: 0, suspected: 3, strain: 'Andes' },
-  'New Zealand': { cases: 1, deaths: 0, confirmed: 0, suspected: 1, strain: 'Andes' },
-  Singapore: { cases: 2, deaths: 0, confirmed: 0, suspected: 2, strain: 'Andes' },
-  Spain: { cases: 1, deaths: 0, confirmed: 0, suspected: 1, strain: 'Andes' },
-  China: { cases: 180, deaths: 5, confirmed: 180, suspected: 0, strain: 'HFRS (Hantaan)' },
-  Russia: { cases: 8000, deaths: 200, confirmed: 8000, suspected: 0, strain: 'HFRS (Puumala)' },
-  Finland: { cases: 1200, deaths: 20, confirmed: 1200, suspected: 0, strain: 'HFRS (Puumala)' },
-  Brazil: { cases: 19, deaths: 10, confirmed: 19, suspected: 0, strain: 'Andes' },
-  Chile: { cases: 45, deaths: 15, confirmed: 45, suspected: 0, strain: 'Andes' },
-  Paraguay: { cases: 26, deaths: 6, confirmed: 26, suspected: 0, strain: 'Andes' },
-  Bolivia: { cases: 48, deaths: 11, confirmed: 48, suspected: 0, strain: 'Andes' }
+  'Tristan da Cunha': { cases: 1, deaths: 0, confirmed: 0, suspected: 1, strain: 'Andes' }
 };
+
 
 // Cache for news articles
 let newsCache = {
